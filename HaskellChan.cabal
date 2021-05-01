@@ -1,0 +1,73 @@
+cabal-version: 1.12
+
+-- This file has been generated from package.yaml by hpack version 0.33.0.
+--
+-- see: https://github.com/sol/hpack
+--
+-- hash: 2aca52a2d7bb80e4d42d13d7d399ff57a8a839f916bb7cc331e5d9c41b602aba
+
+name:           HaskellChan
+version:        0.1.0.0
+description:    Please see the README on GitHub at <https://github.com/hmPham97/HaskellChan/blob/main/README.md>
+homepage:       https://github.com/hmPham97/HaskellChan#readme
+bug-reports:    https://github.com/hmPham97/HaskellChan/issues
+author:         hmPham97
+maintainer:     hmPham97
+copyright:      2021 hmPham97
+license:        BSD3
+license-file:   LICENSE
+build-type:     Simple
+extra-source-files:
+    README.md
+    ChangeLog.md
+
+source-repository head
+  type: git
+  location: https://github.com/hmPham97/HaskellChan
+
+library
+  exposed-modules:
+      Lib
+  other-modules:
+      Paths_HaskellChan
+  hs-source-dirs:
+      src
+  build-depends:
+      base >=4.7 && <5
+    , discord-haskell
+    , emoji
+    , text
+  default-language: Haskell2010
+
+executable HaskellChan-exe
+  main-is: Main.hs
+  hs-source-dirs:
+      app
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      HaskellChan
+    , base >=4.7 && <5
+    , discord-haskell
+    , emoji
+    , text
+  if false
+    other-modules:
+        Paths_HaskellChan
+  default-language: Haskell2010
+
+test-suite HaskellChan-test
+  type: exitcode-stdio-1.0
+  main-is: Spec.hs
+  hs-source-dirs:
+      test
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      HaskellChan
+    , base >=4.7 && <5
+    , discord-haskell
+    , emoji
+    , text
+  if false
+    other-modules:
+        Paths_HaskellChan
+  default-language: Haskell2010
